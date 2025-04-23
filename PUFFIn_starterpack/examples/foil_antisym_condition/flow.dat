@@ -1,0 +1,96 @@
+##########################################################
+#####       Input file for computations               ###
+##########################################################
+
++
+++ Name ++
++++
+simulation_foil
+
++
+++ No. bodies ++ # number of bodies
++++
+1
+
++
+++ Body 1: Mesh++ # mesh file
++++
+foil.dat
+
++
+++ Body 1: Mesh: Translations++ # translation to apply (default 0 0 0)
++++
+0.0 0.0 0.0
+
++
+++ Body 1: Mesh: Rotations++ # rotation to apply (default 0 0 0)
++++
+20.0 0.0 0.0
+
++
+++ Body 1: Mesh: Center of rotations ++ # center of rotation (default 0 0 0)
++++
+0.0 0.0 0.0
+
++
+++ Body 1: Lifting ++ # should be 1 for foils
++++
+1
+
++
+++ Free stream velocities ++ # velocity coordinates in x,y,z-directions (m/s)
++++
+-9.0 0.0 0.0
+    
++
+++ Fluid density ++ # kg/m3
++++
+1026.021
+
++
+++ Number of time steps ++ 
++++
+100
+
++
+++ Time step value ++ # in seconds
++++
+0.004
+
++
+++ Wake: limitation method ?++ # 0=no, 1= limit the number of panels in the wake
++++
+1
+
++
+++ Wake: limitation: value ++ # expects one integer if "limitation method ?"=1
++++
+70
+
+
++
+++ Free Surface: initial position ++ # z coordinate of the initial FS (optional) (default=0.0)
++++
+0.15
+
+
++
+++ Probes interval ++ # 0=no probes (default), or provide the number of time step between probes (optional)
++++	
+10
+
++
+++ Double body ?++ # 0=default, 1=symmetry, 2=antisymmetry
++++
+2
+
++
+++ No. cores ++ # number of cores to use, defaults is 2
++++	
+6
+
++
+++ Results format ++ # 0=tecplot (default), 1=vtk for paraview
++++
+0
+

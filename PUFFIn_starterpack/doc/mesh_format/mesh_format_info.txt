@@ -1,0 +1,36 @@
+A typical mesh file must have the following format :
+first line is a name
+second line gives no. panels along span, chord and total no. nodes
+a specific line 'nodes'
+then list of the nodes number, with node coordinates in x y and z directions
+a specific line 'connectivities'
+then list of the panels number, with the nodes connectivities according to previous list of nodes
+a specific line 'end'
+
+
+Example :
+
+<start of mesh file>
+name 
+<no. panels along span> <no. panels along chord> <total no. of nodes>
+nodes
+1, -0.358091413975, 0.236009299755, -0.0399268046021
+2, -0.35851585865, 0.236000403762, -0.0399114117026
+3, -0.35900464654, 0.235995382071, -0.0399027019739
+4, -0.359567016363, 0.235995829105, -0.039903499186
+5, -0.360213339329, 0.236003562808, -0.0399168804288
+<node number>, <xnode>, <ynode>, <znode>
+...
+connectivities
+1, 1, 63, 64, 2
+2, 2, 64, 65, 3
+3, 3, 65, 66, 4
+4, 4, 66, 67, 5
+<panel number>, <node1>, <node2>, <node3>, <node4>
+...
+end
+<end of mesh file>
+
+!!! IMPORTANT :
+The panels order is given in the attached 'mesh_panels_order.png' file
+The nodes number order should give an outward pointing normal vector

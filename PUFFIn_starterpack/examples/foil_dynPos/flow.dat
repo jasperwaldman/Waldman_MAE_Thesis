@@ -1,0 +1,154 @@
+##########################################################
+#####       Input file for computations               ###
+##########################################################
+
++
+++ Name ++
++++
+simulation_foil
+
++
+++ No. bodies ++ # number of bodies
++++
+1
+
++
+++ Body 1: Mesh++ # mesh file
++++
+foil.dat
+
++
+++ Body 1: Mesh: Translations++ # translation to apply (default 0 0 0)
++++
+0.0 0.0 0.0
+
++
+++ Body 1: Mesh: Rotations++ # rotation to apply (default 0 0 0)
++++
+20.0 0.0 0.0
+
++
+++ Body 1: Mesh: Center of rotations ++ # center of rotation (default 0 0 0)
++++
+0.0 0.0 0.0
+
++
+++ Body 1: Lifting ++ # should be 1 for foils
++++
+1
+
++
+++ Free stream velocities ++ # velocity coordinates in x,y,z-directions (m/s)
++++
+9.0 0.0 0.0
+    
++
+++ Fluid density ++ # kg/m3
++++
+1026.021
+
++
+++ Number of time steps ++ 
++++
+200
+
++
+++ Time step value ++ # in seconds
++++
+0.004
+
++
+++ Wake: limitation method ?++ # 0=no, 1= limit the number of panels in the wake
++++
+1
+
++
+++ Wake: limitation: value ++ # expects one integer if "limitation method ?"=1
++++
+70
+
++
+++ Free Surface ? ++ # 0= no FS (default), >0= FS considered (optional) should be 5 !
++++
+5
+
++
+++ Free Surface: initial position ++ # z coordinate of the initial FS (optional) (default=0.0)
++++
+0.15
+
++
+++ Free Surface: boundaries ++ # size of the FS domain min(x), max(x), min(y), max(y) 
++++
+-2 +10 -4 +4
+
++
+++ Free Surface: no. panels ++ # no. panels in x-y directions 
++++
+60 40
+
++
+++ Probes interval ++ # 0=no probes (default), or provide the number of time step between probes (optional)
++++	
+10
+
++
+++ Steady ? ++ # remove time dependance # should be used for steady computations
++++
+1
+
++
+++ Check convergence ? ++  # computation stop if convergence is obtained within n iterations
++++
+70
+
++
+++ Convergence tolerance ? ++
++++
+0.005
+
++
+++ Dynamic positioning ?++ # for automative positioning 
++++
+1
+
++
+++ Dynamic positioning: start ++ # start at iteration n
++++
+10
+
++
+++ Dynamic positioning: frequency ++ # dynamic positioning called after n iterations
++++
+10
+
++
+++ Dynamic positioning: target forces ++ # target forces to reach for dynamic positioning (Fy, and Fz)
++++
+-200.0 500.0
+
++
+++ Dynamic positioning: reference point ++ # reference point for rotations in the positioning 
++++
+-0.45 0.0 0.0
+
++
+++ Dynamic positioning: accelerate ? ++ # default is =1, helps for faster convergence in most cases
++++
+1
+
++
+++ Dynamic positioning: tolerance ? ++ # default is 0.005 --> 0.5% , dynamic positioning is called when forces differences with targets  are larger than tolerance
++++
+0.005
+
++
+++ No. cores ++ # number of cores to use, defaults is 2
++++	
+6
+
+
++
+++ Results format ++ # 0=tecplot (default), 1=vtk for paraview
++++
+0

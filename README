@@ -1,0 +1,12 @@
+This repo has some of the helper scripts that were written by Jasper Waldman to complete his MAE thesis. 
+
+All scripts are written in Python. Foil generation requires the OpenVSP python API to be installed. https://openvsp.org/api_docs/latest/
+
+The PuffinParallel.py script is written for use on Windows, but can easily be modified for Linux, by altering the lines of code that run PUFFIn through the command line. 
+
+Contact: 
+jslw@princeton.edu
+jasperwaldman@gmail.com
+jasperwaldman.com
+
+
